@@ -3,29 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tacos El Regio - Inicio</title>
+    <title>Tacos El Regio - Paquete PRO</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f8f9fa; }
-        header { background-color: #ff5722; color: white; padding: 30px 10px; }
-        h1 { margin: 0; font-size: 2.5em; }
-        .content { padding: 40px 20px; color: #333; }
-        .btn-whatsapp { display: inline-block; background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1em; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .btn-whatsapp:hover { background-color: #20b858; }
+        /* Estilos generales para celular (Mobile First) */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #1a1a1a; color: #ffffff; padding-bottom: 80px; }
+        
+        /* Sección de bienvenida (Hero) */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'); 
+            background-size: cover; background-position: center; padding: 60px 20px; text-align: center; 
+        }
+        .hero h1 { font-size: 2.8em; color: #ff9800; margin-bottom: 10px; }
+        .hero p { font-size: 1.2em; margin-top: 0; }
+
+        /* Sección del Menú */
+        .seccion-titulo { text-align: center; color: #ff9800; margin-top: 40px; font-size: 2em; }
+        .menu-grid { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 20px; }
+        
+        .platillo { background-color: #2a2a2a; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .platillo img { width: 100%; height: 200px; object-fit: cover; }
+        .platillo-info { padding: 15px; }
+        .platillo-info h3 { margin: 0 0 10px 0; color: #ff9800; }
+        .platillo-info p { margin: 0 0 10px 0; font-size: 0.9em; color: #ccc; }
+        .precio { font-weight: bold; font-size: 1.2em; color: #fff; }
+
+        /* Horarios y Ubicación */
+        .info-local { background-color: #2a2a2a; margin: 20px; padding: 20px; border-radius: 15px; text-align: center; }
+        .info-local h3 { color: #ff9800; }
+
+        /* Botón Flotante para Celulares */
+        .btn-flotante {
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background-color: #25d366; color: white; padding: 15px 40px;
+            border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1em;
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4); z-index: 1000; width: 80%; text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>🌮 Tacos El Regio 🌮</h1>
-        <p>Los mejores tacos de Monterrey, ¡ahora a un clic de distancia!</p>
-    </header>
-
-    <div class="content">
-        <h2>Bienvenido a nuestra sucursal digital</h2>
-        <p>¿Tienes antojo? Pide tus tacos de trompo, bistec y piratas directamente a tu casa o pasa a recogerlos a nuestro local.</p>
-        
-        <a href="#" class="btn-whatsapp">📲 Hacer pedido por WhatsApp</a>
+    <div class="hero">
+        <h1>Tacos El Regio</h1>
+        <p>Auténtico sabor de Monterrey, directo a tu mesa.</p>
     </div>
+
+    <h2 class="seccion-titulo">Nuestro Menú</h2>
+    <div class="menu-grid">
+        
+        <!-- Platillo 1 -->
+        <div class="platillo">
+            <img src="https://images.unsplash.com/photo-1604467715878-83e57e8bc129?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tacos de Trompo">
+            <div class="platillo-info">
+                <h3>Orden de Trompo</h3>
+                <p>5 deliciosos tacos de carne de cerdo marinada al pastor con piña, cebolla y cilantro.</p>
+                <span class="precio">$120 MXN</span>
+            </div>
+        </div>
+
+        <!-- Platillo 2 -->
+        <div class="platillo">
+            <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Tacos de Bistec">
+            <div class="platillo-info">
+                <h3>Orden de Bistec</h3>
+                <p>5 tacos de jugoso bistec de res en tortilla de maíz o harina con sus salsas.</p>
+                <span class="precio">$140 MXN</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="info-local">
+        <h3>📍 Ubicación y Horarios</h3>
+        <p>Av. Paseo de los Leones 1234, Cumbres.</p>
+        <p><strong>Lun - Jue:</strong> 6:00 PM - 1:00 AM</p>
+        <p><strong>Vie - Sab:</strong> 6:00 PM - 3:00 AM</p>
+    </div>
+
+    <!-- El enlace de abajo es para hacer reservas -->
+    <a href="https://wa.me/5218112345678?text=Hola,%20quiero%20hacer%20una%20reservación%20o%20pedido" class="btn-flotante">
+        📅 Reservar / Pedir por WhatsApp
+    </a>
 
 </body>
 </html>
